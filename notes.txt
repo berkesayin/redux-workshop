@@ -1,4 +1,0 @@
-State Management With Redux 
-
-- Küçük projelerde çok büyük sorun olmasa da, büyük bir proje için state management konusu önemli 
-bir durum olabiliyor.  
