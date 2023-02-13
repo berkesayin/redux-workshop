@@ -5,8 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import allReducers from "./reducers/index";
+import { Provider } from "react-redux";
 
-const store = createStore(
+const myStore = createStore(
   allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
@@ -14,7 +15,9 @@ const store = createStore(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={myStore}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

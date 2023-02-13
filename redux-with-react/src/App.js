@@ -1,9 +1,25 @@
-import './App.css';
+import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
+import { increment } from "./actions/index";
+import { decrement } from "./actions/index";
+
 
 function App() {
+  const counter = useSelector(state => state.counter);
+  const isLogged = useSelector(state => state.isLogged);
+  const dispatch = useDispatch();
+
   return (
     <div className="App">
-      <h1>Hello Berke!</h1>
+      <h1>Counter {counter} </h1>
+
+      <button onClick={()=> dispatch(increment())}>+</button>
+      <button onClick={()=> dispatch(decrement())}>-</button>
+
+      <br></br>
+
+      { isLogged ? <h3>If you see this heading, you are logged in!</h3> : 'Not logged in!'}
+      
     </div>
   );
 }
