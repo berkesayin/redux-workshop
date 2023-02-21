@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 
-
 // ACTIONS -> Increment
 const increment = () => {
   return {
@@ -20,7 +19,6 @@ const decrement = () => {
   };
 };
 
-
 // REDUCER
 const counter = (state = 0, action) => {
   switch (action.type) {
@@ -33,22 +31,19 @@ const counter = (state = 0, action) => {
   }
 };
 
-
 // STORE -> Globalized State
 let store = createStore(counter); // Creating the store (globalized state)
 
+// STORE FUNCTIONS: subscribe(), dispatch(), getState()
 
 // DISPLAY the values of state on the console
 store.subscribe(() => console.log(store.getState())); // Prints value of the state on the console.
-
 
 // DISPATCH
 store.dispatch(increment()); // Increments the state by 1. (Makes it 1, beacuse initial value is 0)
 store.dispatch(decrement()); // Decrements the state by 1. (Makes it 0, beacuse current value is 1)
 store.dispatch(decrement()); // Decrements the state by 1. (Makes it -1, beacuse current value is 0)
 store.dispatch(decrement()); // Decrements the state by 1. (Makes it -2, beacuse current value is -1)
-
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

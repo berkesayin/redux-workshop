@@ -4,6 +4,10 @@
 
 [Redux Toolkit Docs](https://redux-toolkit.js.org/)
 
+### Contents
+* [Main Subjects](#main-subjects)
+* [Basic Use Of Redux]()
+* [Basic Counter App with React and Redux]()
 
 ### Create A React Application
 
@@ -20,7 +24,7 @@ npm install redux
 
 > **Main Subjects:** Component level states, global level states, store, reducers, actions, dispatch, redux devtools, provider...
 
-### Component Level State
+### Component Level State <a name="main-subjects"></a>
 - Features required for only component or its children should be defined as component level state.
 - So, it is used within a component and its direct children only.
 - And data changes based on other data within the component.
@@ -125,39 +129,6 @@ unsubscribe();
 
 ### Redux Dev Tools
 - Redux-Devtools provide us debugging platform for Redux apps. It allows us to perform time-travel debugging and live editing. Some of the features in official documentation are as follows − It lets you inspect every state and action payload. It lets you go back in time by “cancelling” actions.
-
-### About Repository
-- This repository is created to practice the basics of state managements with redux. 
-
-```bash
-redux-workshop
-├── redux-intro
-│   └── src
-│   │    └── App.js
-│   │    └── App.css
-│   │    └── index.js
-│   │    └── index.css
-│       
-├── redux-with-react
-│   └── src
-│   │    └── actions
-│   │        └── index.js
-│   │    └── reducers
-│   │        └── index.js
-│   │        └── counter.js
-│   │        └── isLogged.js
-│   │    └── App.js
-│   │    └── App.css
-│   │    └── index.js
-│   │    └── index.css
-│
-├── README.md
-│                      
-```
-
-- In ``redux-intro``, basic view of redux is shown. In ``redux-with-react``, basic counter (decrement/increment 1) app is practiced with redux fundamentals.
-
-
 
 
 
