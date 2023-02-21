@@ -38,7 +38,7 @@ npm install redux
 - Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. 
 
 ### Store 
-- A store is an immutable object tree in Redux. A store is a state container which holds the application's state (applicaiton level states = global level states). Redux can have only a single store in your application. Whenever a store is created in Redux, you need to specify the reducer.
+- A store is an immutable object tree in Redux. A store is a state container which holds the application's state (application level states = global level states). Redux can have only a single store in your application. Whenever a store is created in Redux, you need to specify the reducer.
 
 - Let us see how we can create a store using the createStore method from Redux. One need to import the createStore package from the Redux library that supports the store creation process as shown below −
 
@@ -48,12 +48,12 @@ import reducer from './reducers/reducer'
 const store = createStore(reducer);
 ```
 
-- A createStore function can have three arguments. The following is the syntax −
+- A ``createStore`` function can have three arguments. The following is the syntax −
 
 ```sh
 createStore(reducer, [preloadedState], [enhancer])
 ```
-- A reducer is a function that returns the next state of app. A preloadedState is an optional argument and is the initial state of your app. An enhancer is also an optional argument. It will help you enhance store with third-party capabilities.
+- A ``reducer`` is a function that returns the next state of app. A ``preloadedState`` is an optional argument and is the ``initial state`` of your app. An ``enhancer`` is also an optional argument. It will help you enhance store with third-party capabilities.
 
 - A store has three important methods as given below − `getState, dispatch, subscribe`
 
@@ -90,7 +90,7 @@ unsubscribe();
 ```
 
 ### Reducers 
-- Reducers are functions that take the current state and an action as arguments, and return a new state result. In other words; ``(state, action) => newState``
+- Reducers are functions that take the ``current state`` and an ``action`` as arguments, and return ``a new state result``. In other words; ``(state, action) => newState``
 ### Actions 
 - Actions are plain JavaScript objects that have a type field. As mentioned earlier, you can think of an action as an event that describes something that happened in the application.
 
