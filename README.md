@@ -128,6 +128,7 @@ unsubscribe();
 #### About Repository
 - This repository is created to practice the basics of state managements with redux. 
 
+```bash
 redux-workshop
 ├── redux-intro
 │   └── src
@@ -151,7 +152,7 @@ redux-workshop
 │
 ├── README.md
 │                      
-.
+```
 
 - In ``redux-intro``, basic view of redux is shown. In ``redux-with-react``, basic counter (decrement/increment 1) app is practiced with redux fundamentals.
 
