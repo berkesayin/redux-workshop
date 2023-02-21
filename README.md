@@ -6,8 +6,8 @@
 
 ### Contents
 * [Main Subjects](#main-subjects)
-* [Basic Use Of Redux]()
-* [Basic Counter App with React and Redux]()
+* [Basic Use Of Redux](https://github.com/berkeJr/redux-workshop/blob/master/documentations/1.redux-intro.md)
+* [Basic Counter App with React and Redux](https://github.com/berkeJr/redux-workshop/blob/master/documentations/2.react-with-redux.md)
 
 ### Create A React Application
 
@@ -130,5 +130,6 @@ unsubscribe();
 ### Redux Dev Tools
 - Redux-Devtools provide us debugging platform for Redux apps. It allows us to perform time-travel debugging and live editing. Some of the features in official documentation are as follows − It lets you inspect every state and action payload. It lets you go back in time by “cancelling” actions.
 
-
-
+##### Go To: 
+* [Basic Use Of Redux](https://github.com/berkeJr/redux-workshop/blob/master/documentations/1.redux-intro.md)
+* [Basic Counter App with React and Redux](https://github.com/berkeJr/redux-workshop/blob/master/documentations/2.react-with-redux.md)
