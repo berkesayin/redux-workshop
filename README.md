@@ -5,7 +5,7 @@
 [Redux Toolkit Docs](https://redux-toolkit.js.org/)
 
 
-#### Create A React Application
+### Create A React Application
 
 ```sh
 npx create-react-app my-app
@@ -20,20 +20,20 @@ npm install redux
 
 > **Main Subjects:** Component level states, global level states, store, reducers, actions, dispatch, redux devtools, provider...
 
-#### Component Level State
+### Component Level State
 - Features required for only component or its children should be defined as component level state.
 - So, it is used within a component and its direct children only.
 - And data changes based on other data within the component.
 
 
-#### Global Level State
+### Global Level State
 - Will this piece of data be the same across the entire application? Will this piece of data be used across more than one component? 
 - If the answers to both questions are 'Yes', then this piece of data should ideally be stored in global state. The idea being that if you are using this same piece of data all over your application, it makes more sense to be able to pull that from a single, central location. 
 
-#### State Management With Redux 
+### State Management With Redux 
 - Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. 
 
-#### Store 
+### Store 
 - A store is an immutable object tree in Redux. A store is a state container which holds the application's state (applicaiton level states = global level states). Redux can have only a single store in your application. Whenever a store is created in Redux, you need to specify the reducer.
 
 - Let us see how we can create a store using the createStore method from Redux. One need to import the createStore package from the Redux library that supports the store creation process as shown below −
@@ -53,7 +53,7 @@ createStore(reducer, [preloadedState], [enhancer])
 
 - A store has three important methods as given below − `getState, dispatch, subscribe`
 
-##### getState()
+#### getState()
 - It helps you retrieve the current state of your Redux store.
 - The syntax for getState is as follows − 
 
@@ -61,7 +61,7 @@ createStore(reducer, [preloadedState], [enhancer])
 store.getState()
 ```
 
-##### dispatch()
+#### dispatch()
 - It allows you to dispatch an action to change a state in your application.
 
 - The syntax for dispatch is as follows −
@@ -70,7 +70,7 @@ store.getState()
 store.dispatch({type:'ITEMS_REQUEST'})
 ```
 
-##### subscribe()
+#### subscribe()
 - It helps you register a callback that Redux store will call when an action has been dispatched. As soon as the Redux state has been updated, the view will re-render automatically.
 
 - The syntax for dispatch is as follows −
@@ -85,14 +85,14 @@ const unsubscribe = store.subscribe(()=>{console.log(store.getState());});
 unsubscribe();
 ```
 
-#### Reducers 
+### Reducers 
 - Reducers are functions that take the current state and an action as arguments, and return a new state result. In other words; ``(state, action) => newState``
-#### Actions 
+### Actions 
 - Actions are plain JavaScript objects that have a type field. As mentioned earlier, you can think of an action as an event that describes something that happened in the application.
 
 - In the same way that we designed the state structure based on the app's requirements, we should also be able to come up with a list of some of the actions that describe what's happening:
 
-##### Actions Examples:
+#### Actions Examples:
 
 - Add a new todo entry based on the text the user entered
 - Toggle the completed status of a todo
@@ -104,6 +104,7 @@ unsubscribe();
 - Add a new color filter
 - Remove a color filter
 <br>
+
 - We normally put any extra data needed to describe what's happening into the ``action.payload`` field. This could be a number, a string, or an object with multiple fields inside.
 
 - Based on that list of things that can happen, we can create a list of actions that our application will use:
@@ -118,14 +119,14 @@ unsubscribe();
 - ``{type: 'filters/colorFilterChanged', payload: {color, changeType}``
 
 
-#### Dispatch 
+### Dispatch 
 - ``dispatch`` is a function of the Redux store. You call store.dispatch to dispatch an action. This is the only way to trigger a state change. With React Redux, your components never access the store directly - connect does it for you.
 
 
-#### Redux Dev Tools
+### Redux Dev Tools
 - Redux-Devtools provide us debugging platform for Redux apps. It allows us to perform time-travel debugging and live editing. Some of the features in official documentation are as follows − It lets you inspect every state and action payload. It lets you go back in time by “cancelling” actions.
 
-#### About Repository
+### About Repository
 - This repository is created to practice the basics of state managements with redux. 
 
 ```bash
