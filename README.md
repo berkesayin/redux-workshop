@@ -42,7 +42,7 @@ npm install redux
 
 - Let us see how we can create a store using the createStore method from Redux. One need to import the createStore package from the Redux library that supports the store creation process as shown below −
 
-```sh
+```js
 import { createStore } from 'redux';
 import reducer from './reducers/reducer'
 const store = createStore(reducer);
@@ -50,7 +50,7 @@ const store = createStore(reducer);
 
 - A ``createStore`` function can have three arguments. The following is the syntax −
 
-```sh
+```js
 createStore(reducer, [preloadedState], [enhancer])
 ```
 - A ``reducer`` is a function that returns the next state of app. A ``preloadedState`` is an optional argument and is the ``initial state`` of your app. An ``enhancer`` is also an optional argument. It will help you enhance store with third-party capabilities.
@@ -61,7 +61,7 @@ createStore(reducer, [preloadedState], [enhancer])
 - It helps you retrieve the current state of your Redux store.
 - The syntax for getState is as follows − 
 
-```sh
+```js
 store.getState()
 ```
 
@@ -70,7 +70,7 @@ store.getState()
 
 - The syntax for dispatch is as follows −
 
-```sh
+```js
 store.dispatch({type:'ITEMS_REQUEST'})
 ```
 
@@ -79,12 +79,12 @@ store.dispatch({type:'ITEMS_REQUEST'})
 
 - The syntax for dispatch is as follows −
 
-```sh
+```js
 store.subscribe(()=>{ console.log(store.getState());})
 ```
 - Note that subscribe function returns a function for unsubscribing the listener. To unsubscribe the listener, we can use the below code −
 
-```sh
+```js
 const unsubscribe = store.subscribe(()=>{console.log(store.getState());});
 unsubscribe();
 ```
